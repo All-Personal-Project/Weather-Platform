@@ -1,0 +1,61 @@
+@mixin display() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#weathersSection {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("/public/images/shea-rouda-_8W52TK8Pmo-unsplash.jpg");
+    @include display;
+
+    #cardWeathersParent {
+        width: 70%;
+        height: 700px;
+        border-radius: 15px;
+        background-color: rgba(56, 56, 56, 0.792);
+        @include display;
+        flex-direction: column;
+        justify-content: normal;
+        gap: 10px;
+
+        #titleWeathersCard {
+            text-decoration-line: underline;
+            font-size: 40px;
+            margin: 2%;
+            color: rgb(209, 208, 208);
+        }
+
+        #gridWeathers {
+            width: 98%;
+            @include display;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #paragraphWeathers>p {
+            width: 150px;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        #paragraphWeathers>h4 {
+
+            font-size: 40px;
+            font-weight: 900;
+
+        }
+    }
+}
