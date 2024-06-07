@@ -1,0 +1,89 @@
+.cardWeathersComponent {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    // max with
+    img {
+      max-width: 400px;
+      max-height: 400px;
+      border-radius: 15px;
+    }
+    .cardWeather {
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+    }
+  
+    #paragraphWeathers {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      h4 {
+        font-size: 20px;
+        color: black;
+        margin: 0;
+      }
+      p {
+        font-size: 12px;
+        color: black;
+      }
+    }
+  
+    &[data-size="medium"] {
+      width: 14%;
+      height: 200px;
+      border-radius: 15px;
+    }
+    &[data-size="large"] {
+      width: 15%;
+      height: 200px;
+      border-radius: 15px;
+    }
+    &[data-size="small"] {
+      width: 10%;
+      height: 200px;
+      border-radius: 15px;
+    }
+    &[data-size="extraSmall"] {
+      width: 8%;
+      height: 200px;
+      border-radius: 15px;
+    }
+    &[data-size="extraLarge"] {
+      width: 45%;
+      height: 550px;
+      border-radius: 15px;
+    }
+    &[data-status="primary"] {
+      background-color: rgba(48, 48, 48, 0.96);
+      color: rgb(46, 46, 46);
+      text-align: center;
+  
+      &:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+    }
+    &[data-status="scend"] {
+      background-color: rgba(4, 9, 1, 0.96);
+      color: rgb(246, 205, 55);
+  
+      &:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+    }
+  
+    &[data-status="possible"] {
+      background-color: rgb(218, 217, 216);
+      color: rgb(1, 33, 1);
+  
+      &:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+    }
+  }
